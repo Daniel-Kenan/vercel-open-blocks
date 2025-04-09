@@ -117,19 +117,17 @@ export default function WorkflowPage({ params }: WorkflowPageProps) {
       <main className="flex-1 overflow-hidden flex">
         <div className="flex-1 overflow-hidden flex">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 flex flex-col">
-            <div className="border-b px-4 py-2">
-              <TabsList className="workflow-tabs">
-                <TabsTrigger value="editor" className="workflow-tab">
-                  Editor
-                </TabsTrigger>
-                <TabsTrigger value="executions" className="workflow-tab">
-                  Executions
-                </TabsTrigger>
-                <TabsTrigger value="settings" className="workflow-tab">
-                  Settings
-                </TabsTrigger>
-              </TabsList>
-            </div>
+            <TabsList className="workflow-tabs">
+              <TabsTrigger value="editor" className="workflow-tab">
+                Editor
+              </TabsTrigger>
+              <TabsTrigger value="executions" className="workflow-tab">
+                Executions
+              </TabsTrigger>
+              <TabsTrigger value="settings" className="workflow-tab">
+                Settings
+              </TabsTrigger>
+            </TabsList>
             <TabsContent value="editor" className="flex-1 overflow-hidden">
               <WorkflowEditor />
             </TabsContent>
